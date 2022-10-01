@@ -1,13 +1,6 @@
 const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString().split("\n");
+const inputData = fs.readFileSync("dev/stdin").toString().split(" ");
+const A = parseInt(inputData[0]);
+const B = parseInt(inputData[1]);
 
-input = input[0];
-input = input.split(" ").map((item) => +item);
-
-solution(input[0], input[1]);
-
-function solution(A, B) {
-  // Write your code
-  console.log(A + B);
-}
+console.log(A + B);
