@@ -8,4 +8,8 @@ function mySolution(s){
     const Y = [...s].filter(i=>i==="y").length;
     return P === Y ? true : false;
 }
-
+function mySolution2(s){
+    const P = [...s].filter(i=>i==="p" || i==="P" ).length;
+    const Y = [...s].filter(i=>i==="y" || i==="Y").length;
+    return P === Y
+}
